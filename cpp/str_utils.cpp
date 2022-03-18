@@ -1,4 +1,7 @@
 #include <map>
+#include <cctype>
+#include <string>
+#include <algorithm>
 #include "str_utils.h"
 
 std::string escape(std::string& s) {
