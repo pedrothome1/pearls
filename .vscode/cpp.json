@@ -1,0 +1,10 @@
+{
+	"CppGuard": {
+		"prefix": "cppgrd",
+		"body": [
+			"#ifndef ${TM_FILENAME/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}/g}",
+			"#define ${TM_FILENAME/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}/g}",
+			"\n#endif // ${TM_FILENAME/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}/g}"
+		]
+	}
+}
