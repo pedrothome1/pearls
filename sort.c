@@ -26,7 +26,6 @@ int main() {
   for (i = 0; i < RECORDS_NUM; ++i) {
     phone = 0;
     fread(&phone, 3, 1, src_f);
-    // phone = (phone & 0xFF0000) >> 16 | (phone & 0x0000FF) << 16 | phone & 0x00FF00;
     bitvec_on(bit, phone);
   }
 
