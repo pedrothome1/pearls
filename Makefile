@@ -1,14 +1,18 @@
 # Programs
-all: random4 testbitvec
+# all: random4 testbitvec
+all: rotate_vector
+
+rotate_vector:
+	g++ -std=c++2a cpp/rotate_vector.cpp -o rotate_vector.out
 
 random4: str_utils.o rand_uint.o char_buf.o random4.o
-	g++ -std=c++2a out/str_utils.o out/rand_uint.o out/char_buf.o out/random4.o -o random4
+	g++ -std=c++2a out/str_utils.o out/rand_uint.o out/char_buf.o out/random4.o -o random4.out
 
 random4.o:
 	g++ -std=c++2a -c cpp/random4.cpp -o out/random4.o
 
 testbitvec: bitvec.o cbitvec.o testbitvec.o
-	g++ -std=c++2a out/bitvec.o out/cbitvec.o out/testbitvec.o -o testbitvec
+	g++ -std=c++2a out/bitvec.o out/cbitvec.o out/testbitvec.o -o testbitvec.out
 
 testbitvec.o:
 	g++ -std=c++2a -c cpp/testbitvec.cpp -o out/testbitvec.o
